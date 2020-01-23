@@ -1,0 +1,59 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="colors.css">
+<title>Colors</title>
+
+<script src="colorPalette.js"></script>
+
+</head>
+<body onload="showPalette()">
+<div id="content"></div>
+
+</div>
+
+<div style="position:fixed; top:5%; right:25%; width:10%;">colors</div>
+<div style="position:fixed; top:10%; right:25%; width:10%;">rfrequency</div>
+<div style="position:fixed; top:15%; right:25%; width:10%;">gfrequency</div>
+<div style="position:fixed; top:20%; right:25%; width:10%;">bfrequency</div>
+<div style="position:fixed; top:25%; right:25%; width:10%;">rdiff</div>
+<div style="position:fixed; top:30%; right:25%; width:10%;">gdiff</div>
+<div style="position:fixed; top:35%; right:25%; width:10%;">bdiff</div>
+<div style="position:fixed; top:40%; right:25%; width:10%;">colorAmplitude</div>
+<div style="position:fixed; top:45%; right:25%; width:10%;">colorCenter</div>
+
+<form class="form1" id="form" onsubmit="return false;">
+    <span title="Number of colors to create">
+      <input style="position:fixed; top:5%; right:10%; width:10%;" type="number" id="colors" value="32"/></span>
+    <span title="Frequency change for red.
+Decreasing this makes red mix more frequently, increasing less">
+      <input style="position:fixed; top:10%; right:10%; width:10%;" type="float" id="rfrequency" value=".2"/></span>
+    <span title="Frequency change for green.
+Decreasing this makes green mix more frequently, increasing less">
+      <input style="position:fixed; top:15%; right:10%; width:10%;" type="float" id="gfrequency" value=".2"/></span>
+    <span title="Frequency change for blue.
+Decreasing this makes blue mix more frequently, increasing less">
+      <input style="position:fixed; top:20%; right:10%; width:10%;" type="float" id="bfrequency" value=".2"/></span>
+    <span title="Starting offset for red in degrees">
+      <input style="position:fixed; top:25%; right:10%; width:10%;" type="number" id="rdiff" value="0"/></span>
+    <span title="Starting offset for green in degrees">
+      <input style="position:fixed; top:30%; right:10%; width:10%;" type="number" id="gdiff" value="120"/></span>
+    <span title="Starting offset for blue in degrees">
+      <input style="position:fixed; top:35%; right:10%; width:10%;" type="number" id="bdiff" value="240"/></span>
+    <span title="How far from the center value the colors are calculated.
+0 < colorCenter +/- colorAmplitude < 255, 127 is default.">
+      <input style="position:fixed; top:40%; right:10%; width:10%;" type="number" id="colorAmplitude" value="127"></span>
+    <span title="Central value for color calculation, 128 is default.">
+      <input style="position:fixed; top:45%; right:10%; width:10%;" type="number" id="colorCenter" value="128"></span>
+    <span title="Change the display to reflect changes to above values">
+      <input style="position:fixed; top:50%; right:5%; width:30%;" type="submit" onclick="showPalette();"></span>
+    <span title="Reset to default values">
+      <input style="position:fixed; top:55%; right:20%; width:15%;" type="reset" onclick="resetPalette();"></span>
+    <span title="Randomize values within recommended limits">
+      <input style="position:fixed; top:55%; right:5%; width:15%;" type="submit" value="Random" onclick="randomPalette();"></span>
+</form>
+
+<div id="summary" style="position:fixed; top:60%; right:5%; height:38%; width:30%; overflow:scroll;">If this text is displayed something went wrong</div>
+
+</body>
+</html>
