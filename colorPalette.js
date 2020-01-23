@@ -6,6 +6,7 @@ function getRandom(max) {
 
 function changeColors(delta) {
   document.getElementById("colors").value = parseInt(document.getElementById("colors").value) + parseInt(delta);
+  showPalette()
 }
 
 function copyText() {
@@ -24,6 +25,7 @@ function changeFrequency(delta,color) {
   } else if (color == "b") {
     document.getElementById("bfrequency").value = (parseFloat(document.getElementById("bfrequency").value) + parseFloat(delta)).toFixed(1);
   }
+  showPalette();
 }
 
 function changeDifference(delta,color) {
@@ -34,6 +36,7 @@ function changeDifference(delta,color) {
   } else if (color == "b") {
     document.getElementById("bdiff").value = (parseInt(document.getElementById("bdiff").value) + parseInt(delta));
   }
+  showPalette();
 }
 
 function resetPalette() {
@@ -46,7 +49,7 @@ function resetPalette() {
   document.getElementById("bdiff").value = 240;
   document.getElementById("colorAmplitude").value = 127;  //127 for half of 256
   document.getElementById("colorCenter").value = 128;
-  showPalette()
+  showPalette();
 }
 
 function randomPalette() {
