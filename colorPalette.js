@@ -8,6 +8,14 @@ function changeColors(delta) {
   document.getElementById("colors").value = parseInt(document.getElementById("colors").value) + parseInt(delta);
 }
 
+function copyText() {
+  var target = toString(document.getElementById("summary"));
+  target.select();
+  //target.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.getElementById("summary").value = "COPIED:&#13;" + document.getElementById("summary");
+}
+
 function changeFrequency(delta,color) {
   if (color == "r") {
     document.getElementById("rfrequency").value = (parseFloat(document.getElementById("rfrequency").value) + parseFloat(delta)).toFixed(1);
@@ -78,7 +86,7 @@ function showPalette() {
     var r = parseInt(Math.sin(rfrequency*i + (rDiff*Math.PI/180)) * colorAmplitude + colorCenter);
     var g = parseInt(Math.sin(gfrequency*i + (gDiff*Math.PI/180)) * colorAmplitude + colorCenter);
     var b = parseInt(Math.sin(bfrequency*i + (bDiff*Math.PI/180)) * colorAmplitude + colorCenter);
-    paletteText += ("rgb(" + r + "," + g + "," + b + ")<br>");
+    paletteText += ("rgb(" + r + "," + g + "," + b + ")\r");
     var name = "rectangle" + i;
     document.getElementById(name).innerHTML = "color "+ i +": rgb(" + r + "," + g + "," + b + ")";
     document.getElementById(name).style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
@@ -87,5 +95,5 @@ function showPalette() {
     document.getElementById(name).style.height = colorHeight-1 + "px";
     document.getElementById(name).style.fontSize = colorHeight*3/4;
   }
-  document.getElementById("summary").innerHTML = paletteText;
+  document.getElementById("summary").value = paletteText;
 }
