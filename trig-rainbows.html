@@ -24,27 +24,27 @@
 
 <form class="form1" id="form" onsubmit="return false;">
     <span title="Number of colors to create">
-      <input style="position:fixed; top:5%; right:10%; width:10%;" type="number" id="colors" value="32"/></span>
+      <input class="input1" style="top:5%;" type="number" id="colors" value="32"/></span>
     <span title="Frequency change for red.
 Decreasing this makes red mix more frequently, increasing less">
-      <input style="position:fixed; top:10%; right:10%; width:10%;" type="float" id="rfrequency" value=".2"/></span>
+      <input class="input1" style="top:10%;" type="float" id="rfrequency" value=".2"/></span>
     <span title="Frequency change for green.
 Decreasing this makes green mix more frequently, increasing less">
-      <input style="position:fixed; top:15%; right:10%; width:10%;" type="float" id="gfrequency" value=".2"/></span>
+      <input class="input1" style="top:15%;" type="float" id="gfrequency" value=".2"/></span>
     <span title="Frequency change for blue.
 Decreasing this makes blue mix more frequently, increasing less">
-      <input style="position:fixed; top:20%; right:10%; width:10%;" type="float" id="bfrequency" value=".2"/></span>
+      <input class="input1" style="top:20%;" type="float" id="bfrequency" value=".2"/></span>
     <span title="Starting offset for red in degrees">
-      <input style="position:fixed; top:25%; right:10%; width:10%;" type="number" id="rdiff" value="0"/></span>
+      <input class="input1" style="top:25%;" type="number" id="rdiff" value="0"/></span>
     <span title="Starting offset for green in degrees">
-      <input style="position:fixed; top:30%; right:10%; width:10%;" type="number" id="gdiff" value="120"/></span>
+      <input class="input1" style="top:30%;" type="number" id="gdiff" value="120"/></span>
     <span title="Starting offset for blue in degrees">
-      <input style="position:fixed; top:35%; right:10%; width:10%;" type="number" id="bdiff" value="240"/></span>
+      <input class="input1" style="top:35%;" type="number" id="bdiff" value="240"/></span>
     <span title="How far from the center value the colors are calculated.
 0 < colorCenter +/- colorAmplitude < 255, 127 is default.">
-      <input style="position:fixed; top:40%; right:10%; width:10%;" type="number" id="colorAmplitude" value="127"></span>
+      <input class="input1" style="top:40%;" type="number" id="colorAmplitude" value="127"></span>
     <span title="Central value for color calculation, 128 is default.">
-      <input style="position:fixed; top:45%; right:10%; width:10%;" type="number" id="colorCenter" value="128"></span>
+      <input class="input1" style="top:45%;" type="number" id="colorCenter" value="128"></span>
     <span title="Change the display to reflect changes to above values">
       <input style="position:fixed; top:50%; right:5%; width:30%;" type="submit" onclick="showPalette();"></span>
     <span title="Reset to default values">
@@ -52,6 +52,8 @@ Decreasing this makes blue mix more frequently, increasing less">
     <span title="Randomize values within recommended limits">
       <input style="position:fixed; top:55%; right:5%; width:15%;" type="submit" value="Random" onclick="randomPalette();"></span>
 </form>
+
+<div class="upArrow" style="right:5%;">&uarr;</div>
 
 <div id="summary" style="position:fixed; top:60%; right:5%; height:38%; width:30%; overflow:scroll;">If this text is displayed something went wrong</div>
 

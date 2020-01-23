@@ -18,3 +18,33 @@ div.colorRectangle {
 form.form1 {
   background-color: rgb(0,0,255);
 }
+
+input.input1 {
+  position:fixed;
+  right:10%;
+  width:10%;
+}
+
+div.upArrow {
+  font-family:Verdana,sans-serif;
+  width: 5%;
+  height: 5%;
+  position: fixed;
+  border: 1px solid black;
+  text-align: center;
+  color: white;
+  background-color: blue;
+  font-size: 1vw;
+}
+
+div.downArrow {
+  font-family:Verdana,sans-serif;
+  width: 5%;
+  height: 5%;
+  position: fixed;
+  border: 1px solid black;
+  text-align: center;
+  color: white;
+  background-color: red;
+  font-size: 1vw;
+}
