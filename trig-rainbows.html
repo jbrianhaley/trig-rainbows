@@ -12,15 +12,15 @@
 
 </div>
 
-<div style="position:fixed; top:5%; right:25%; width:10%;">colors</div>
-<div style="position:fixed; top:10%; right:25%; width:10%;">rfrequency</div>
-<div style="position:fixed; top:15%; right:25%; width:10%;">gfrequency</div>
-<div style="position:fixed; top:20%; right:25%; width:10%;">bfrequency</div>
-<div style="position:fixed; top:25%; right:25%; width:10%;">rdiff</div>
-<div style="position:fixed; top:30%; right:25%; width:10%;">gdiff</div>
-<div style="position:fixed; top:35%; right:25%; width:10%;">bdiff</div>
-<div style="position:fixed; top:40%; right:25%; width:10%;">colorAmplitude</div>
-<div style="position:fixed; top:45%; right:25%; width:10%;">colorCenter</div>
+<div class="labels" style="top:5%;">colors</div>
+<div class="labels" style="top:10%;">rfrequency</div>
+<div class="labels" style="top:15%;">gfrequency</div>
+<div class="labels" style="top:20%;">bfrequency</div>
+<div class="labels" style="top:25%;">rdiff</div>
+<div class="labels" style="top:30%;">gdiff</div>
+<div class="labels" style="top:35%;">bdiff</div>
+<div class="labels" style="top:40%;">colorAmplitude</div>
+<div class="labels" style="top:45%;">colorCenter</div>
 
 <form class="form1" id="form" onsubmit="return false;">
     <span title="Number of colors to create">
@@ -53,7 +53,20 @@ Decreasing this makes blue mix more frequently, increasing less">
       <input style="position:fixed; top:55%; right:5%; width:15%;" type="submit" value="Random" onclick="randomPalette();"></span>
 </form>
 
-<div class="upArrow" style="right:5%;">&uarr;</div>
+<div class="upArrow" style="top:5%;" onclick="changeColors(1);">&uarr;</div>
+<div class="downArrow" style="top:5%;" onclick="changeColors(-1);">&darr;</div>
+<div class="upArrow" style="top:10%;" onclick="changeFrequency(.1,'r');">&uarr;</div>
+<div class="downArrow" style="top:10%;" onclick="changeFrequency(-.1,'r');">&darr;</div>
+<div class="upArrow" style="top:15%;" onclick="changeFrequency(.1,'g');">&uarr;</div>
+<div class="downArrow" style="top:15%;" onclick="changeFrequency(-.1,'g');">&darr;</div>
+<div class="upArrow" style="top:20%;" onclick="changeFrequency(.1,'b');">&uarr;</div>
+<div class="downArrow" style="top:20%;" onclick="changeFrequency(-.1,'b');">&darr;</div>
+<div class="upArrow" style="top:25%;" onclick="changeDifference(1,'r');">&uarr;</div>
+<div class="downArrow" style="top:25%;" onclick="changeDifference(-1,'r');">&darr;</div>
+<div class="upArrow" style="top:30%;" onclick="changeDifference(1,'g');">&uarr;</div>
+<div class="downArrow" style="top:30%;" onclick="changeDifference(-1,'g');">&darr;</div>
+<div class="upArrow" style="top:35%;" onclick="changeDifference(1,'b');">&uarr;</div>
+<div class="downArrow" style="top:35%;" onclick="changeDifference(-1,'b');">&darr;</div>
 
 <div id="summary" style="position:fixed; top:60%; right:5%; height:38%; width:30%; overflow:scroll;">If this text is displayed something went wrong</div>
 

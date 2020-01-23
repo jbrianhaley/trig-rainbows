@@ -4,6 +4,30 @@ function getRandom(max) {
   return (Math.random() * max);
 }
 
+function changeColors(delta) {
+  document.getElementById("colors").value = parseInt(document.getElementById("colors").value) + parseInt(delta);
+}
+
+function changeFrequency(delta,target,color) {
+  if (color == "r") {
+    document.getElementById("rfrequency").value = (parseFloat(document.getElementById("rfrequency").value) + parseFloat(delta)).toFixed(1);
+  } else if (color == "g") {
+    document.getElementById("gfrequency").value = (parseFloat(document.getElementById("gfrequency").value) + parseFloat(delta)).toFixed(1);
+  } else if (color == "b") {
+    document.getElementById("bfrequency").value = (parseFloat(document.getElementById("bfrequency").value) + parseFloat(delta)).toFixed(1);
+  }
+}
+
+function changeDifference(delta,color) {
+  if (color == "r") {
+    document.getElementById("rdiff").value = (parseInt(document.getElementById("rdiff").value) + parseInt(delta));
+  } else if (color == "g") {
+    document.getElementById("gdiff").value = (parseInt(document.getElementById("gdiff").value) + parseInt(delta));
+  } else if (color == "b") {
+    document.getElementById("bdiff").value = (parseInt(document.getElementById("bdiff").value) + parseInt(delta));
+  }
+}
+
 function resetPalette() {
   document.getElementById("colors").value = 32;
   document.getElementById("rfrequency").value = .2;
@@ -18,7 +42,7 @@ function resetPalette() {
 }
 
 function randomPalette() {
-  document.getElementById("colors").value = Math.floor(getRandom(64))+1;
+  //document.getElementById("colors").value = Math.floor(getRandom(56))+8;
   document.getElementById("rfrequency").value = getRandom(1).toFixed(1)*2;
   document.getElementById("gfrequency").value = getRandom(1).toFixed(1)*2;
   document.getElementById("bfrequency").value = getRandom(1).toFixed(1)*2;
