@@ -8,11 +8,7 @@ function changeColors(delta) {
   document.getElementById("colors").value = parseInt(document.getElementById("colors").value) + parseInt(delta);
 }
 
-<<<<<<< HEAD
 function changeFrequency(delta,color) {
-=======
-function changeFrequency(delta,target,color) {
->>>>>>> e2cf13ad841e2a8e18154a7168d0a1ba05eb863a
   if (color == "r") {
     document.getElementById("rfrequency").value = (parseFloat(document.getElementById("rfrequency").value) + parseFloat(delta)).toFixed(1);
   } else if (color == "g") {
