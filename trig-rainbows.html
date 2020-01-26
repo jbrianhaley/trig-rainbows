@@ -57,12 +57,12 @@ Decreasing this makes blue mix more frequently, increasing less">
 
 <div class="upArrow" style="top:5%;" onclick="changeColors(1);">&uarr;</div>
 <div class="downArrow" style="top:5%;" onclick="changeColors(-1);">&darr;</div>
-<div class="upArrow" style="top:10%;" onclick="changeFrequency(.1,'r');">&uarr;</div>
-<div class="downArrow" style="top:10%;" onclick="changeFrequency(-.1,'r');">&darr;</div>
-<div class="upArrow" style="top:15%;" onclick="changeFrequency(.1,'g');">&uarr;</div>
-<div class="downArrow" style="top:15%;" onclick="changeFrequency(-.1,'g');">&darr;</div>
-<div class="upArrow" style="top:20%;" onclick="changeFrequency(.1,'b');">&uarr;</div>
-<div class="downArrow" style="top:20%;" onclick="changeFrequency(-.1,'b');">&darr;</div>
+<div class="upArrow" style="top:10%;" onclick="changeFrequency(.01,'r');">&uarr;</div>
+<div class="downArrow" style="top:10%;" onclick="changeFrequency(-.01,'r');">&darr;</div>
+<div class="upArrow" style="top:15%;" onclick="changeFrequency(.01,'g');">&uarr;</div>
+<div class="downArrow" style="top:15%;" onclick="changeFrequency(-.01,'g');">&darr;</div>
+<div class="upArrow" style="top:20%;" onclick="changeFrequency(.01,'b');">&uarr;</div>
+<div class="downArrow" style="top:20%;" onclick="changeFrequency(-.01,'b');">&darr;</div>
 <div class="upArrow" style="top:25%;" onclick="changeDifference(5,'r');">&uarr;</div>
 <div class="downArrow" style="top:25%;" onclick="changeDifference(-5,'r');">&darr;</div>
 <div class="upArrow" style="top:30%;" onclick="changeDifference(5,'g');">&uarr;</div>
@@ -72,7 +72,8 @@ Decreasing this makes blue mix more frequently, increasing less">
 
 <!--<div id="summary" style="position:fixed; top:60%; right:5%; height:38%; width:30%; overflow:scroll;">If this text is displayed something went wrong</div>
 -->
-<textarea id="summary" value="Hello World" style="position:fixed; top:60%; right:5%; height:38%; width:30%; overflow:scroll;">
+<textarea id="summary" value="Hello World" style="position:fixed; top:60%; right:5%; height:38%; width:30%; overflow:scroll; visibility:visible;"></textarea>
+<div id="colorDetail" class="detail" style="position:fixed; top:60%; right:5%; height:38%; width:30%; visibility:hidden; background-color:coral;">nada</div>
 
 </body>
 </html>
